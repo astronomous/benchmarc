@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voorbeelden - BenchMarc</title>
+    <meta name="description" content="Bekijk voorbeelden van BenchMarc interieurontwerpen. Van frisse design pakketten tot luxe high-end transformaties.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-charcoal': 'rgb(37, 35, 34)',
+                        'warm-gray': 'rgb(220, 215, 210)',
+                        'warm-gray-light': 'rgb(240, 238, 235)',
+                        'warm-gray-dark': 'rgb(160, 155, 150)',
+                        'accent-warm': 'rgb(200, 190, 180)',
+                    },
+                    fontFamily: {
+                        'sans': ['-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '88': '22rem',
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: rgb(37, 35, 34);
+        }
+
+        .grid-square {
+            aspect-ratio: 1 / 1;
+        }
+
+        .grid-rect {
+            aspect-ratio: 4 / 3;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .hover-scale {
+            transition: transform 0.4s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+
+        .section-padding {
+            padding: 6rem 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 10rem 3rem;
+            }
+        }
+
+        .letter-spacing-wide {
+            letter-spacing: 0.05em;
+        }
+
+        .letter-spacing-wider {
+            letter-spacing: 0.15em;
+        }
+    </style>
+</head>
+<body class="bg-dark-charcoal text-warm-gray font-sans antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark-charcoal border-b border-warm-gray-dark border-opacity-20">
+        <nav class="container mx-auto px-6 md:px-12 py-6">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-xl md:text-2xl tracking-wider text-warm-gray-light font-light letter-spacing-wider hover:text-warm-gray transition-colors duration-300">BENCHMARC</a>
+                <div class="flex gap-8 items-center">
+                    <a href="voorbeelden.html" class="text-sm text-warm-gray hover:text-warm-gray-light transition-colors duration-300 letter-spacing-wide uppercase hidden md:block">
+                        Voorbeelden
+                    </a>
+                    <a href="index.html#prijzen" class="text-sm text-warm-gray hover:text-warm-gray-light transition-colors duration-300 letter-spacing-wide uppercase hidden md:block">
+                        Prijzen
+                    </a>
+                    <a href="quiz.html" class="text-sm border border-warm-gray text-warm-gray hover:bg-warm-gray hover:text-dark-charcoal transition-all duration-300 px-6 py-2 letter-spacing-wide uppercase">
+                        Start Quiz
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section-padding mt-20">
+        <div class="container mx-auto px-6 md:px-12 max-w-7xl">
+            <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+                <p class="text-sm md:text-base letter-spacing-wider uppercase text-warm-gray-dark mb-6">
+                    Portfolio
+                </p>
+                <h1 class="text-4xl md:text-6xl font-light mb-8 text-warm-gray-light leading-tight">
+                    Voorbeelden van<br>
+                    onze ontwerpen
+                </h1>
+                <p class="text-lg md:text-xl text-warm-gray-dark leading-relaxed">
+                    Van frisse redesigns tot complete transformaties. Bekijk wat BenchMarc voor jou kan betekenen.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Package Examples -->
+    <section class="section-padding border-t border-warm-gray-dark border-opacity-20">
+        <div class="container mx-auto px-6 md:px-12 max-w-7xl">
+            <div class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-light text-warm-gray-light letter-spacing-wide mb-4">Design Pakket</h2>
+                <p class="text-warm-gray-dark leading-relaxed max-w-2xl">
+                    Een frisse start voor jouw ruimte. Professioneel ontwerp met alle basis elementen om je interieur nieuw leven in te blazen.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Example Placeholder 1 -->
+                <div class="hover-scale fade-in">
+                    <div class="grid-rect bg-warm-gray-dark bg-opacity-10 mb-4 border border-warm-gray-dark border-opacity-20"></div>
+                    <h3 class="text-lg font-light text-warm-gray-light mb-2 letter-spacing-wide">Voorbeeld 1</h3>
+                    <p class="text-sm text-warm-gray-dark">Moderne woonkamer met natuurlijke tinten</p>
+                </div>
+
+                <!-- Example Placeholder 2 -->
+                <div class="hover-scale fade-in" style="animation-delay: 0.1s;">
+                    <div class="grid-rect bg-warm-gray-dark bg-opacity-10 mb-4 border border-warm-gray-dark border-opacity-20"></div>
+                    <h3 class="text-lg font-light text-warm-gray-light mb-2 letter-spacing-wide">Voorbeeld 2</h3>
+                    <p class="text-sm text-warm-gray-dark">Minimalistische slaapkamer design</p>
+                </div>
+
+                <!-- Example Placeholder 3 -->
+                <div class="hover-scale fade-in" style="animation-delay: 0.2s;">
+                    <div class="grid-rect bg-warm-gray-dark bg-opacity-10 mb-4 border border-warm-gray-dark border-opacity-20"></div>
+                    <h3 class="text-lg font-light text-warm-gray-light mb-2 letter-spacing-wide">Voorbeeld 3</h3>
+                    <p class="text-sm text-warm-gray-dark">Scandinavische eetkamer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Package Examples -->
+    <section class="section-padding border-t border-warm-gray-dark border-opacity-20">
+        <div class="container mx-auto px-6 md:px-12 max-w-7xl">
+            <div class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-light text-warm-gray-light letter-spacing-wide mb-4">Luxury Pakket</h2>
+                <p class="text-warm-gray-dark leading-relaxed max-w-2xl">
+                    Breng je ruimte tot leven met gedetailleerde 3D visualisaties en premium materiaal keuzes. Meer ontwerpopties en persoonlijke begeleiding.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Example Placeholder 1 -->
+                <div class="hover-scale fade-in">
+                    <div class="grid-rect bg-warm-gray-dark bg-opacity-10 mb-4 border border-warm-gray-dark border-opacity-20"></div>
+                    <h3 class="text-lg font-light text-warm-gray-light mb-2 letter-spacing-wide">Voorbeeld 1</h3>
+                    <p class="text-sm text-warm-gray-dark">Luxe woonkamer met custom meubilair</p>
+                </div>
+
+                <!-- Example Placeholder 2 -->
+                <div class="hover-scale fade-in" style="animation-delay: 0.1s;">
+                    <div class="grid-rect bg-warm-gray-dark bg-opacity-10 mb-4 border border-warm-gray-dark border-opacity-20"></div>
+                    <h3 class="text-lg font-light text-warm-gray-light mb-2 letter-spacing-wide">Voorbeeld 2</h3>
+                    <p class="text-sm text-warm-gray-dark">Elegante master bedroom suite</p>
+                </div>
+
+                <!-- Example Placeholder 3 -->
+                <div class="hover-scale fade-in" style="animation-delay: 0.2s;">
+                    <div class="grid-rect bg-warm-gray-dark bg-opacity-10 mb-4 border border-warm-gray-dark border-opacity-20"></div>
+                    <h3 class="text-lg font-light text-warm-gray-light mb-2 letter-spacing-wide">Voorbeeld 3</h3>
+                    <p class="text-sm text-warm-gray-dark">Modern kantoor met stijl</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- High-End Package Examples -->
+    <section class="section-padding border-t border-warm-gray-dark border-opacity-20">
+        <div class="container mx-auto px-6 md:px-12 max-w-7xl">
+            <div class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-light text-accent-warm letter-spacing-wide mb-4">High-End Pakket</h2>
+                <p class="text-warm-gray-dark leading-relaxed max-w-2xl">
+                    Transformeer je ruimte compleet. Met 360° panorama's, uitgebreide begeleiding en de meest luxe materialen en meubels.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Example Placeholder 1 -->
+                <div class="hover-scale fade-in">
+                    <div class="grid-rect bg-warm-gray-dark bg-opacity-10 mb-4 border border-warm-gray-dark border-opacity-20"></div>
+                    <h3 class="text-lg font-light text-warm-gray-light mb-2 letter-spacing-wide">Voorbeeld 1</h3>
+                    <p class="text-sm text-warm-gray-dark">Complete villa transformatie</p>
+                </div>
+
+                <!-- Example Placeholder 2 -->
+                <div class="hover-scale fade-in" style="animation-delay: 0.1s;">
+                    <div class="grid-rect bg-warm-gray-dark bg-opacity-10 mb-4 border border-warm-gray-dark border-opacity-20"></div>
+                    <h3 class="text-lg font-light text-warm-gray-light mb-2 letter-spacing-wide">Voorbeeld 2</h3>
+                    <p class="text-sm text-warm-gray-dark">Exclusieve penthouse inrichting</p>
+                </div>
+
+                <!-- Example Placeholder 3 -->
+                <div class="hover-scale fade-in" style="animation-delay: 0.2s;">
+                    <div class="grid-rect bg-warm-gray-dark bg-opacity-10 mb-4 border border-warm-gray-dark border-opacity-20"></div>
+                    <h3 class="text-lg font-light text-warm-gray-light mb-2 letter-spacing-wide">Voorbeeld 3</h3>
+                    <p class="text-sm text-warm-gray-dark">Designer loft met custom details</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding border-t border-b border-warm-gray-dark border-opacity-20">
+        <div class="container mx-auto px-6 md:px-12 max-w-4xl text-center">
+            <h3 class="text-3xl md:text-5xl font-light mb-8 text-warm-gray-light leading-tight">
+                Klaar voor jouw<br>
+                eigen ontwerp?
+            </h3>
+            <p class="text-lg md:text-xl text-warm-gray-dark mb-12 leading-relaxed max-w-2xl mx-auto">
+                Start de gratis stijlquiz en ontdek welk pakket bij jou past.
+            </p>
+            <a href="quiz.html" class="inline-block border border-warm-gray-light text-warm-gray-light px-16 py-5 text-sm letter-spacing-wider uppercase hover:bg-warm-gray-light hover:text-dark-charcoal transition-all duration-400">
+                Start de Gratis Quiz
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-warm-gray-dark border-opacity-20 py-12">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center">
+                <p class="text-sm letter-spacing-wider text-warm-gray-dark mb-2">BENCHMARC</p>
+                <p class="text-xs text-warm-gray-dark opacity-60">
+                    © 2025 BenchMarc. Alle rechten voorbehouden.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

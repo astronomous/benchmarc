@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BenchMarc - Online Interieuradvies op Maat</title>
+    <meta name="description" content="Ontdek jouw perfecte interieur met BenchMarc. Persoonlijke interieurontwerpen online, afgestemd op jouw stijl en budget.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-charcoal': 'rgb(37, 35, 34)',
+                        'warm-gray': 'rgb(220, 215, 210)',
+                        'warm-gray-light': 'rgb(240, 238, 235)',
+                        'warm-gray-dark': 'rgb(160, 155, 150)',
+                        'accent-warm': 'rgb(200, 190, 180)',
+                    },
+                    fontFamily: {
+                        'sans': ['-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '88': '22rem',
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: rgb(37, 35, 34);
+        }
+
+        .grid-square {
+            aspect-ratio: 1 / 1;
+        }
+
+        .grid-rect {
+            aspect-ratio: 4 / 3;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .hover-scale {
+            transition: transform 0.4s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+
+        .section-padding {
+            padding: 6rem 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 10rem 3rem;
+            }
+        }
+
+        .letter-spacing-wide {
+            letter-spacing: 0.05em;
+        }
+
+        .letter-spacing-wider {
+            letter-spacing: 0.15em;
+        }
+    </style>
+</head>
+<body class="bg-dark-charcoal text-warm-gray font-sans antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark-charcoal border-b border-warm-gray-dark border-opacity-20">
+        <nav class="container mx-auto px-6 md:px-12 py-6">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-xl md:text-2xl tracking-wider text-warm-gray-light font-light letter-spacing-wider hover:text-warm-gray transition-colors duration-300">BENCHMARC</a>
+                <div class="flex gap-8 items-center">
+                    <a href="voorbeelden.html" class="text-sm text-warm-gray hover:text-warm-gray-light transition-colors duration-300 letter-spacing-wide uppercase hidden md:block">
+                        Voorbeelden
+                    </a>
+                    <a href="index.html#proces" class="text-sm text-warm-gray hover:text-warm-gray-light transition-colors duration-300 letter-spacing-wide uppercase hidden md:block">
+                        Proces
+                    </a>
+                    <a href="index.html#prijzen" class="text-sm text-warm-gray hover:text-warm-gray-light transition-colors duration-300 letter-spacing-wide uppercase hidden md:block">
+                        Prijzen
+                    </a>
+                    <a href="quiz.html" class="text-sm border border-warm-gray text-warm-gray hover:bg-warm-gray hover:text-dark-charcoal transition-all duration-300 px-6 py-2 letter-spacing-wide uppercase">
+                        Start Quiz
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section-padding mt-20">
+        <div class="container mx-auto px-6 md:px-12 max-w-7xl">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-24 items-center">
+                <div class="fade-in">
+                    <p class="text-sm md:text-base letter-spacing-wider uppercase text-warm-gray-dark mb-6">
+                        Professioneel ontworpen
+                    </p>
+                    <h2 class="text-4xl md:text-6xl lg:text-7xl font-light mb-8 text-warm-gray-light leading-tight">
+                        Jouw droominterieur,<br>
+                        verrassend<br>
+                        betaalbaar
+                    </h2>
+                    <p class="text-lg md:text-xl text-warm-gray-dark leading-relaxed mb-12">
+                        Persoonlijke interieurontwerpen op maat, volledig online.
+                    </p>
+                    <a href="quiz.html" class="inline-block border border-warm-gray text-warm-gray px-12 py-4 text-sm letter-spacing-wider uppercase hover:bg-warm-gray hover:text-dark-charcoal transition-all duration-400">
+                        Ontdek jouw stijl
+                    </a>
+                </div>
+                <div class="grid-rect bg-warm-gray-dark bg-opacity-10 hover-scale"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="prijzen" class="section-padding border-t border-warm-gray-dark border-opacity-20">
+        <div class="container mx-auto px-6 md:px-12 max-w-7xl">
+            <h3 class="text-sm letter-spacing-wider uppercase text-warm-gray-dark mb-20 text-center">Pakketten</h3>
+
+            <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+
+                <!-- Design Package -->
+                <div class="bg-warm-gray-dark bg-opacity-5 border border-warm-gray-dark border-opacity-20 p-8 md:p-10 hover-scale">
+                    <div class="text-center mb-8 pb-8 border-b border-warm-gray-dark border-opacity-20">
+                        <h4 class="text-2xl font-light text-warm-gray-light letter-spacing-wide mb-3">Design</h4>
+                        <p class="text-sm text-warm-gray-dark mb-6 letter-spacing-wide">Een frisse start</p>
+                        <p class="text-xs text-warm-gray-dark letter-spacing-wide">vanaf</p>
+                        <div class="text-4xl font-light text-warm-gray-light mb-2">€389</div>
+                        <p class="text-xs text-warm-gray-dark letter-spacing-wide">per ruimte</p>
+                    </div>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>1 concept</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>1 design revisie</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>Chat toegang met designer</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>2D & 3D plattegronden</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>Gepersonaliseerde shopping list</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>Muurafwerking aanbevelingen</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>Raambekleding</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>Levering binnen 15 dagen</span>
+                        </li>
+                    </ul>
+                    <a href="quiz.html" class="block text-center border border-warm-gray text-warm-gray px-8 py-3 text-sm letter-spacing-wider uppercase hover:bg-warm-gray hover:text-dark-charcoal transition-all duration-400">
+                        Start nu
+                    </a>
+                </div>
+
+                <!-- Luxury Package (Most Popular) -->
+                <div class="bg-warm-gray-dark bg-opacity-10 border-2 border-warm-gray border-opacity-40 p-8 md:p-10 hover-scale relative">
+                    <div class="absolute top-0 right-0 bg-accent-warm text-dark-charcoal text-xs px-4 py-1 letter-spacing-wide uppercase font-light">
+                        Populair
+                    </div>
+                    <div class="text-center mb-8 pb-8 border-b border-warm-gray-dark border-opacity-20">
+                        <h4 class="text-2xl font-light text-warm-gray-light letter-spacing-wide mb-3">Luxury</h4>
+                        <p class="text-sm text-warm-gray-dark mb-6 letter-spacing-wide">Breng je ruimte tot leven</p>
+                        <div class="text-4xl font-light text-warm-gray-light mb-2">€499</div>
+                        <p class="text-xs text-warm-gray-dark letter-spacing-wide">per ruimte</p>
+                    </div>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>2 concepten</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>2 design revisies</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>30-minuten video call & Chat</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>2D & 3D plattegrond</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>3D rendering van je ruimte</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>Gepersonaliseerde shopping list</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>Muurafwerking aanbevelingen</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>Vloerbedekking aanbevelingen</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>Raambekleding</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>Levering binnen 12 dagen</span>
+                        </li>
+                    </ul>
+                    <a href="quiz.html" class="block text-center border border-warm-gray-light text-warm-gray-light px-8 py-3 text-sm letter-spacing-wider uppercase hover:bg-warm-gray-light hover:text-dark-charcoal transition-all duration-400">
+                        Start nu
+                    </a>
+                </div>
+
+                <!-- High-End Package -->
+                <div class="bg-warm-gray-dark bg-opacity-5 border border-warm-gray-dark border-opacity-20 p-8 md:p-10 hover-scale">
+                    <div class="text-center mb-8 pb-8 border-b border-warm-gray-dark border-opacity-20">
+                        <h4 class="text-2xl font-light text-accent-warm letter-spacing-wide mb-3">High-End</h4>
+                        <p class="text-sm text-warm-gray-dark mb-6 letter-spacing-wide">Transformeer je ruimte</p>
+                        <div class="text-4xl font-light text-warm-gray-light mb-2">€779</div>
+                        <p class="text-xs text-warm-gray-dark letter-spacing-wide">per ruimte</p>
+                    </div>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>2 concepten</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>3 design revisies</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>60-minuten video call & Chat</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>2D & 3D plattegrond</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>3D rendering van je ruimte</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>360° panoramisch beeld</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>Gepersonaliseerde shopping list</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>Muurafwerking aanbevelingen</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>Vloerbedekking aanbevelingen</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>Raambekleding</span>
+                        </li>
+                        <li class="flex items-start text-warm-gray-dark">
+                            <span class="text-warm-gray mr-3 mt-1">✓</span>
+                            <span>Levering binnen 10 dagen</span>
+                        </li>
+                    </ul>
+                    <a href="quiz.html" class="block text-center border border-warm-gray text-warm-gray px-8 py-3 text-sm letter-spacing-wider uppercase hover:bg-warm-gray hover:text-dark-charcoal transition-all duration-400">
+                        Start nu
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="proces" class="section-padding border-t border-warm-gray-dark border-opacity-20">
+        <div class="container mx-auto px-6 md:px-12 max-w-7xl">
+            <h3 class="text-sm letter-spacing-wider uppercase text-warm-gray-dark mb-20 text-center">Het Proces</h3>
+            <div class="grid md:grid-cols-3 gap-16 md:gap-24">
+                <div class="text-left fade-in">
+                    <div class="text-6xl font-light text-warm-gray-dark mb-6">01</div>
+                    <h4 class="text-xl font-light mb-4 text-warm-gray-light letter-spacing-wide">Quiz</h4>
+                    <p class="text-warm-gray-dark leading-relaxed">
+                        Beantwoord korte vragen over jouw ruimte, stijl en budget. Het duurt maar 5 minuten.
+                    </p>
+                </div>
+                <div class="text-left fade-in">
+                    <div class="text-6xl font-light text-warm-gray-dark mb-6">02</div>
+                    <h4 class="text-xl font-light mb-4 text-warm-gray-light letter-spacing-wide">Intake</h4>
+                    <p class="text-warm-gray-dark leading-relaxed">
+                        We maken (online) kennis, ik luister naar je wensen en ga voor jou aan de slag. 
+                    </p>
+                </div>
+                <div class="text-left fade-in">
+                    <div class="text-6xl font-light text-warm-gray-dark mb-6">03</div>
+                    <h4 class="text-xl font-light mb-4 text-warm-gray-light letter-spacing-wide">Ontwerp</h4>
+                    <p class="text-warm-gray-dark leading-relaxed">
+                         Ik maak een persoonlijk designplan met kleurenschema, moodboard en productadvies. Jij ontvangt een compleet interieurplan met aankoopadvies. Stylen maar!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz CTA Section -->
+    <section id="quiz" class="section-padding border-t border-b border-warm-gray-dark border-opacity-20">
+        <div class="container mx-auto px-6 md:px-12 max-w-4xl text-center">
+            <h3 class="text-3xl md:text-5xl font-light mb-8 text-warm-gray-light leading-tight">
+                Klaar om te beginnen?
+            </h3>
+            <p class="text-lg md:text-xl text-warm-gray-dark mb-12 leading-relaxed max-w-2xl mx-auto">
+                Start de gratis stijlquiz en ontdek welk interieurplan bij jou past.
+                Geen verplichtingen, gewoon inspiratie.
+            </p>
+            <a href="quiz.html" class="inline-block border border-warm-gray-light text-warm-gray-light px-16 py-5 text-sm letter-spacing-wider uppercase hover:bg-warm-gray-light hover:text-dark-charcoal transition-all duration-400">
+                Start de Gratis Quiz
+            </a>
+        </div>
+    </section>
+
+    <!-- Benefits Grid -->
+    <section id="waarom" class="section-padding">
+        <div class="container mx-auto px-6 md:px-12 max-w-7xl">
+            <h3 class="text-sm letter-spacing-wider uppercase text-warm-gray-dark mb-20 text-center">Waarom BenchMarc</h3>
+            <div class="grid md:grid-cols-2 gap-12 md:gap-16 max-w-5xl mx-auto">
+                <div class="border-l border-warm-gray-dark border-opacity-30 pl-8">
+                    <h4 class="text-xl font-light mb-4 text-warm-gray-light letter-spacing-wide">Betaalbaar</h4>
+                    <p class="text-warm-gray-dark leading-relaxed">
+                        Professioneel interieuradvies zonder de hoge kosten van traditionele designers.
+                    </p>
+                </div>
+                <div class="border-l border-warm-gray-dark border-opacity-30 pl-8">
+                    <h4 class="text-xl font-light mb-4 text-warm-gray-light letter-spacing-wide">Professioneel</h4>
+                    <p class="text-warm-gray-dark leading-relaxed">
+                        Volledig online een professioneel ontwerp. 
+                    </p>
+                </div>
+                <div class="border-l border-warm-gray-dark border-opacity-30 pl-8">
+                    <h4 class="text-xl font-light mb-4 text-warm-gray-light letter-spacing-wide">Persoonlijk</h4>
+                    <p class="text-warm-gray-dark leading-relaxed">
+                        Elk ontwerp is uniek en afgestemd op jouw smaak, ruimte en budget.
+                    </p>
+                </div>
+                <div class="border-l border-warm-gray-dark border-opacity-30 pl-8">
+                    <h4 class="text-xl font-light mb-4 text-warm-gray-light letter-spacing-wide">Shoppable</h4>
+                    <p class="text-warm-gray-dark leading-relaxed">
+                        Direct links naar producten, zodat je meteen aan de slag kunt met je nieuwe interieur.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-padding border-t border-warm-gray-dark border-opacity-20">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="max-w-3xl mx-auto text-center">
+                <h3 class="text-sm letter-spacing-wider uppercase text-warm-gray-dark mb-12">
+                    Over BenchMarc
+                </h3>
+                <div class="mb-12 flex justify-center">
+                    <img src="marc-engelen-himself.jpg" alt="Marc Engelen" class="w-48 h-48 md:w-56 md:h-56 object-cover object-top rounded-sm border border-warm-gray-dark border-opacity-20">
+                </div>
+                <p class="text-lg md:text-xl text-warm-gray leading-relaxed mb-8">
+                    Hoi, ik ben Marc Engelen. Als interieurontwerper geloof ik dat iedereen recht heeft op een ruimte die echt bij hen past. De afgelopen 15 jaar heb ik vele klanten geholpen hun woondroom te realiseren, van een handige kast tot complete villa's van binnen en van buiten. Met mijn jarenlange ervaring in interieurontwerp help ik je om jouw woning te transformeren
+                    tot een plek waar je helemaal jezelf kunt zijn - helemaal online en veel toegankelijker dan je denkt!
+                </p>
+                <p class="text-lg md:text-xl text-warm-gray-dark leading-relaxed">
+                    Van kleurenschema's tot materialen en meubels – ik begeleid je bij elke stap,
+                    zodat je zelfverzekerd jouw droominterieur kunt realiseren.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-warm-gray-dark border-opacity-20 py-12">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center">
+                <p class="text-sm letter-spacing-wider text-warm-gray-dark mb-2">BENCHMARC</p>
+                <p class="text-xs text-warm-gray-dark opacity-60">
+                    © 2025 BenchMarc. Alle rechten voorbehouden.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

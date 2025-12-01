@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stijlquiz - BenchMarc</title>
+    <meta name="description" content="Ontdek jouw interieurstijl met de BenchMarc quiz. Krijg een persoonlijk designplan op maat.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-charcoal': 'rgb(37, 35, 34)',
+                        'warm-gray': 'rgb(220, 215, 210)',
+                        'warm-gray-light': 'rgb(240, 238, 235)',
+                        'warm-gray-dark': 'rgb(160, 155, 150)',
+                        'accent-warm': 'rgb(200, 190, 180)',
+                    },
+                    fontFamily: {
+                        'sans': ['-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '88': '22rem',
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: rgb(37, 35, 34);
+        }
+
+        .letter-spacing-wide {
+            letter-spacing: 0.05em;
+        }
+
+        .letter-spacing-wider {
+            letter-spacing: 0.15em;
+        }
+
+        /* Typeform embed container */
+        .typeform-container {
+            width: 100%;
+            height: 100%;
+            min-height: 600px;
+        }
+
+        @media (min-width: 768px) {
+            .typeform-container {
+                min-height: 700px;
+            }
+        }
+
+        /* Full height layout for quiz */
+        .quiz-content {
+            min-height: calc(100vh - 80px);
+        }
+    </style>
+</head>
+<body class="bg-dark-charcoal text-warm-gray font-sans antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark-charcoal border-b border-warm-gray-dark border-opacity-20">
+        <nav class="container mx-auto px-6 md:px-12 py-6">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-xl md:text-2xl tracking-wider text-warm-gray-light font-light letter-spacing-wider hover:text-warm-gray transition-colors duration-300">BENCHMARC</a>
+                <div class="flex gap-8 items-center">
+                    <a href="voorbeelden.html" class="text-sm text-warm-gray hover:text-warm-gray-light transition-colors duration-300 letter-spacing-wide uppercase hidden md:block">
+                        Voorbeelden
+                    </a>
+                    <a href="index.html#proces" class="text-sm text-warm-gray hover:text-warm-gray-light transition-colors duration-300 letter-spacing-wide uppercase hidden md:block">
+                        Proces
+                    </a>
+                    <a href="index.html#prijzen" class="text-sm text-warm-gray hover:text-warm-gray-light transition-colors duration-300 letter-spacing-wide uppercase hidden md:block">
+                        Prijzen
+                    </a>
+                    <a href="quiz.html" class="text-sm border border-warm-gray text-warm-gray hover:bg-warm-gray hover:text-dark-charcoal transition-all duration-300 px-6 py-2 letter-spacing-wide uppercase">
+                        Start Quiz
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Quiz Content -->
+    <main class="quiz-content pt-24 pb-12">
+        <div class="container mx-auto px-6 md:px-12 max-w-7xl">
+
+            <!-- Introduction Section -->
+            <div class="text-center mb-12 md:mb-16">
+                <h1 class="text-3xl md:text-5xl font-light mb-6 text-warm-gray-light leading-tight">
+                    Ontdek jouw interieurstijl
+                </h1>
+                <p class="text-lg md:text-xl text-warm-gray-dark max-w-2xl mx-auto leading-relaxed">
+                    Beantwoord enkele vragen over jouw ruimte, voorkeuren en budget.
+                    Het duurt maar 5 minuten en je krijgt direct een persoonlijk advies.
+                </p>
+            </div>
+
+            <!-- Typeform Embed Container -->
+            <div class="typeform-container" style="width: 100%; height: 700px;">
+                <div data-tf-live="01KB5Z4JGG2E1NW2PZYPXKVZJM"></div>
+                <script src="https://embed.typeform.com/next/embed.js"></script>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="mt-12 md:mt-16 text-center">
+                <p class="text-warm-gray-dark text-sm letter-spacing-wide">
+                    Na het invullen van de quiz ontvang je een persoonlijk designvoorstel
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-warm-gray-dark border-opacity-20 py-12 mt-12">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center">
+                <p class="text-sm letter-spacing-wider text-warm-gray-dark mb-2">BENCHMARC</p>
+                <p class="text-xs text-warm-gray-dark opacity-60">
+                    © 2025 BenchMarc. Alle rechten voorbehouden.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

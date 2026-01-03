@@ -1,6 +1,6 @@
-# BenchMarc Landing Page
+# Marc Engelen Interior Landing Page
 
-Een moderne, responsieve landing page voor BenchMarc - online interieuradvies op maat.
+Een moderne, responsieve landing page voor Marc Engelen Interior - online interieuradvies op maat.
 
 ## Features
 
@@ -35,7 +35,7 @@ Een moderne, responsieve landing page voor BenchMarc - online interieuradvies op
 ```bash
 # Push je code
 git add .
-git commit -m "Add BenchMarc landing page"
+git commit -m "Add Marc Engelen Interior landing page"
 git push origin main
 
 # Enable GitHub Pages (via gh CLI)
@@ -79,7 +79,7 @@ Als je liever een popup gebruikt, vervang de placeholder met:
 
 ### Kleuren
 - Pas de kleuren aan in het `tailwind.config` object (regel 10-18)
-- Gebruik de custom kleuren met class names zoals `bg-benchmarc-sage`
+- Gebruik de custom kleuren met class names zoals `bg-warm-gray`
 
 ### Secties
 De pagina bestaat uit:
